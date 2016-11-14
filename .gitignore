@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/4077c79bfb552a6e3ed92cd510873f4e796ab661/Android.gitignore
+### https://raw.github.com/github/gitignore/7b46307743513585b362bb78fc2e2009a2cba587/Android.gitignore
 
 # Built application files
 *.apk
@@ -37,6 +37,7 @@ captures/
 # Intellij
 *.iml
 .idea/workspace.xml
+.idea/tasks.xml
 .idea/libraries
 
 # Keystore files
@@ -46,7 +47,7 @@ captures/
 .externalNativeBuild
 
 
-### https://raw.github.com/github/gitignore/4077c79bfb552a6e3ed92cd510873f4e796ab661/Global/JetBrains.gitignore
+### https://raw.github.com/github/gitignore/7b46307743513585b362bb78fc2e2009a2cba587/Global/JetBrains.gitignore
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -56,6 +57,7 @@ captures/
 .idea/tasks.xml
 
 # Sensitive or high-churn files:
+.idea/dataSources/
 .idea/dataSources.ids
 .idea/dataSources.xml
 .idea/dataSources.local.xml
@@ -91,7 +93,7 @@ crashlytics-build.properties
 fabric.properties
 
 
-### https://raw.github.com/github/gitignore/4077c79bfb552a6e3ed92cd510873f4e796ab661/Global/macOS.gitignore
+### https://raw.github.com/github/gitignore/7b46307743513585b362bb78fc2e2009a2cba587/Global/macOS.gitignore
 
 *.DS_Store
 .AppleDouble
@@ -119,26 +121,5 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
-### https://raw.github.com/github/gitignore/4077c79bfb552a6e3ed92cd510873f4e796ab661/Global/Tags.gitignore
-
-# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
-TAGS
-.TAGS
-!TAGS/
-tags
-.tags
-!tags/
-gtags.files
-GTAGS
-GRTAGS
-GPATH
-GSYMS
-cscope.files
-cscope.out
-cscope.in.out
-cscope.po.out
-
 
 
