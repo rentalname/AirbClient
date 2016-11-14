@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="44dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/roomImage" />
+
+    <EditText
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="12345678"
+        android:ems="10"
+        android:id="@+id/roomId" />
+
+    <EditText
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/roomName" />
+</LinearLayout>
