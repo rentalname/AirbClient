@@ -19,7 +19,7 @@ class ListingListAdapter(private val context: Context) : BaseAdapter() {
     override fun getCount(): Int = listings.size
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        ((convertView as? ListingView) ?: ListingView(context)).apply {
+        return ((convertView as? ListingView) ?: ListingView(context)).apply {
             setListing(getItem(position))
         }
     }

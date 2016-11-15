@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:id="@+id/view_listing"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:weightSum="1">
 
     <ImageView
-        android:src="@mipmap/ic_launcher"
+        android:id="@+id/roomImage"
         android:layout_width="44dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/roomImage" />
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary" />
 
     <EditText
+        android:id="@+id/roomId"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="12345678"
         android:ems="10"
-        android:id="@+id/roomId" />
+        android:inputType="textPersonName"
+        android:text="12345678" />
 
     <EditText
+        android:id="@+id/roomName"
         android:layout_width="212dp"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
-        android:id="@+id/roomName" />
+        android:inputType="textPersonName"
+        android:text="Name" />
 </LinearLayout>
