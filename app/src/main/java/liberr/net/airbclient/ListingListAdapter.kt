@@ -23,5 +23,4 @@ class ListingListAdapter(private val context: Context) : BaseAdapter() {
             setListing(getItem(position))
         }
     }
-
 }

@@ -1,16 +1,18 @@
 package liberr.net.airbclient.model
 
+import com.squareup.moshi.Json
+
 data class PricingQuote(
+        @Json(name = "listing_currency")
+        val listingCurrency: String,
+        @Json(name = "localized_currency")
+        val localizedCurrency: String,
+        @Json(name = "localized_night_price")
+        val localizedNightlyPrice: Int,
+        @Json(name = "night_price")
+        val nightlyPrice: Int,
         val available: Boolean,
         val checkin: Any,
         val checkout: Any,
-        val guests: Int,
-        val listingCurrency: String,
-        val localizedCurrency: String,
-        val localizedNightlyPrice: Int,
-        val localizedServiceFee: Int,
-        val localizedTotalPrice: Int,
-        val nightlyPrice: Int,
-        val serviceFee: Int,
-        val totalPrice: Int
+        val guests: Int
 )

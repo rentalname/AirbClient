@@ -1,6 +1,9 @@
 package liberr.net.airbclient.model
 
+import com.squareup.moshi.Json
+
 data class SearchResult(
-        val listing: List<Listing>,
-        val pricingQuote: PricingQuote
+        @Json(name = "pricing_quote")
+        val pricingQuote: PricingQuote,
+        val listing: Listing
 )

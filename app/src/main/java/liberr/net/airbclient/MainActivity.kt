@@ -41,9 +41,8 @@ class MainActivity : Activity() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .bindToLifecycle(listing_list)
-                .subscribe({
-                    Logger.d(it.listing)
-                    listingListAdapter.listings = listOf(it.listing)
+                .subscribe({ searchResponse ->
+                    listingListAdapter.listings = searchResponse.searchResults.map({it.listing})
                     listingListAdapter.notifyDataSetChanged()
                 }, {
                     Logger.d(it)

@@ -8,23 +8,20 @@
 
     <ImageView
         android:id="@+id/roomImage"
-        android:layout_width="44dp"
-        android:layout_height="match_parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@color/colorPrimary" />
 
-    <EditText
+    <TextView
         android:id="@+id/roomId"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="12345678" />
 
-    <EditText
+    <TextView
         android:id="@+id/roomName"
         android:layout_width="212dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="Name"
+        android:lines="2"/>
 </LinearLayout>

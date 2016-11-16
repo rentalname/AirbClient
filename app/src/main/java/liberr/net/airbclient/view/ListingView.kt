@@ -1,13 +1,13 @@
 package liberr.net.airbclient.view
 
 import android.content.Context
-import android.net.Uri
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import liberr.net.airbclient.R
+import liberr.net.airbclient.loadImage
 import liberr.net.airbclient.model.Listing
 
 
@@ -32,7 +32,7 @@ class ListingView : FrameLayout {
 
     fun setListing(item: Listing) {
         roomIdView.text = item.id.toString()
-        roomImageView.setImageURI(Uri.parse(item.pictureUrl))
+        roomImageView.loadImage(item.pictureUrl)
         roomNameView.text = item.name
     }
 }
