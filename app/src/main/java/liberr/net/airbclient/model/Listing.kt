@@ -26,7 +26,7 @@ data class Listing(
         @Json(name = "scrime_color")
         val scrimColor: String,
         @Json(name = "star_rating")
-        val starRating: Float = 0f,
+        val starRating: Float? = 0f,
         @Json(name = "thumbnail_url")
         val thumbnailUrl: String,
         @Json(name = "user_id")
@@ -41,11 +41,11 @@ data class Listing(
         val xlPictureUrls: List<String>,
         val id: Int,
         val name: String,
-        val bathrooms: Int,
+        val bathrooms: Float?,
         val bedrooms: Int,
         val beds: Int,
         val city: String,
-        val distance: Double,
+        val distance: Double?,
         val lat: Double,
         val lng: Double,
         val neighborhood: String,
@@ -58,7 +58,7 @@ data class Listing(
         }
     }
 
-    constructor(source: Parcel) : this(source.readInt(), source.createStringArrayList(), source.readString(), source.readString(), source.readInt(), source.readString(), source.readInt(), source.readString(), source.readString(), source.readString(), source.readFloat(), source.readString(), source.readInt(), source.readString(), source.readString(), source.createStringArrayList(), source.createStringArrayList(), source.readInt(), source.readString(), source.readInt(), source.readInt(), source.readInt(), source.readString(), source.readDouble(), source.readDouble(), source.readDouble(), source.readString(), source.readParcelable<User>(User::class.java.classLoader))
+    constructor(source: Parcel) : this(source.readInt(), source.createStringArrayList(), source.readString(), source.readString(), source.readInt(), source.readString(), source.readInt(), source.readString(), source.readString(), source.readString(), source.readFloat(), source.readString(), source.readInt(), source.readString(), source.readString(), source.createStringArrayList(), source.createStringArrayList(), source.readInt(), source.readString(), source.readFloat(), source.readInt(), source.readInt(), source.readString(), source.readDouble(), source.readDouble(), source.readDouble(), source.readString(), source.readParcelable<User>(User::class.java.classLoader))
 
     override fun describeContents() = 0
 
@@ -73,7 +73,7 @@ data class Listing(
         dest?.writeString(roomType)
         dest?.writeString(roomTypeCategory)
         dest?.writeString(scrimColor)
-        dest?.writeFloat(starRating)
+        starRating?.let { dest?.writeFloat(it) }
         dest?.writeString(thumbnailUrl)
         dest?.writeInt(userId)
         dest?.writeString(xlPictureUrl)
@@ -82,11 +82,11 @@ data class Listing(
         dest?.writeStringList(xlPictureUrls)
         dest?.writeInt(id)
         dest?.writeString(name)
-        dest?.writeInt(bathrooms)
+        bathrooms?.let { dest?.writeFloat(it) }
         dest?.writeInt(bedrooms)
         dest?.writeInt(beds)
         dest?.writeString(city)
-        dest?.writeDouble(distance)
+        distance?.let { dest?.writeDouble(it) }
         dest?.writeDouble(lat)
         dest?.writeDouble(lng)
         dest?.writeString(neighborhood)

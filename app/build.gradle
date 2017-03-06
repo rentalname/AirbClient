@@ -12,6 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -30,29 +31,30 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     androidTestCompile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    compile 'com.orhanobut:logger:1.15'
-
     // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
-    compile group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.1.0'
+    compile group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.2.0'
     // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-moshi
-    compile group: 'com.squareup.retrofit2', name: 'converter-moshi', version: '2.1.0'
+    compile group: 'com.squareup.retrofit2', name: 'converter-moshi', version: '2.2.0'
     // https://mvnrepository.com/artifact/com.squareup.retrofit2/adapter-rxjava
-    compile group: 'com.squareup.retrofit2', name: 'adapter-rxjava', version: '2.1.0'
+    compile group: 'com.squareup.retrofit2', name: 'adapter-rxjava', version: '2.2.0'
     // https://mvnrepository.com/artifact/com.trello/rxlifecycle-android
-    compile group: 'com.trello', name: 'rxlifecycle-android', version: '0.8.0'
+    compile group: 'com.trello', name: 'rxlifecycle-android', version: '1.0'
     // https://mvnrepository.com/artifact/com.trello/rxlifecycle-components
-    compile group: 'com.trello', name: 'rxlifecycle-components', version: '0.8.0'
-    // https://bintray.com/bintray/jcenter/com.trello%3Arxlifecycle-kotlin/1.0
-    compile group: 'com.trello', name: 'rxlifecycle-kotlin', version: '0.8.0'
+    compile group: 'com.trello', name: 'rxlifecycle-components', version: '1.0'
+    // https://bintray.com/bintray/jcenter/com.trello/rxlifecycle-kotlin/1.0
+    compile group: 'com.trello', name: 'rxlifecycle-kotlin', version: '1.0'
     // https://mvnrepository.com/artifact/io.reactivex/rxandroid
     compile group: 'io.reactivex', name: 'rxandroid', version: '1.2.1'
     // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
     compile group: 'com.github.bumptech.glide', name: 'glide', version: '3.7.0'
     // https://mvnrepository.com/artifact/com.google.android/support-v4
-    compile group: 'com.google.android', name: 'support-v4', version: 'r7'
+    // compile group: 'com.google.android', name: 'support-v4', version: 'r7'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.google.android.gms:play-services:10.2.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta5'
+    testCompile 'junit:junit:4.12'
 }
 
 kapt {

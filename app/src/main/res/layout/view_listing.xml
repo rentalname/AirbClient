@@ -8,8 +8,10 @@
 
     <ImageView
         android:id="@+id/roomImage"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
         android:background="@color/colorPrimary" />
 
     <TextView
@@ -20,8 +22,9 @@
 
     <TextView
         android:id="@+id/roomName"
-        android:layout_width="212dp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:lines="2"/>
+        android:textSize="@dimen/cast_libraries_material_featurehighlight_text_body_size"
+        android:lines="3"/>
 </LinearLayout>
